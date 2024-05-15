@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import Product from "../components/Product";
 import Feature from "../components/Feature";
-import Footer from "../components/Footer";
+
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Hero />
       <Product />
       <Feature />
-      <Footer />
+     
     </div>
   );
 };
