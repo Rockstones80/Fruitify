@@ -16,7 +16,7 @@ const Header = () => {
     <div className=" px-20 py-7 w-full flex items-center justify-between">
       <Link to='/'><div className=" font-extrabold text-3xl ">fruitify</div></Link>
       <div className=" flex gap-8">
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
         <Link>About</Link>
         <Link to='/cart'>
           <p>Cart</p>

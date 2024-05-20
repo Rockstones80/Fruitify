@@ -61,3 +61,48 @@ export const Products = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo voluptate, iusto voluptatum natus quos iste numquam, quisquam officia voluptatibus ipsum obcaecati sed aperiam recusandae cum incidunt nihil odio laudantium sequi!",
   },
 ];
+
+import { BsCompass } from "react-icons/bs";
+import { RxDashboard } from "react-icons/rx";
+import { FaRegHeart, FaListUl } from "react-icons/fa";
+import { TiMessages } from "react-icons/ti";
+import { RiFileListFill } from "react-icons/ri";
+
+export const sideTop = [
+  {
+    id: 1,
+    label: 'Dashboard',
+    route: 'dashboard',
+    icon: <BsCompass />
+  },
+  {
+    id: 2,
+    label: 'Products',
+    route: 'product',
+    icon: <RxDashboard />
+  },
+  {
+    id: 3,
+    label: 'Favourites',
+    route: 'favourites',
+    icon: <FaRegHeart />
+  },
+  {
+    id: 4,
+    label: 'Inbox',
+    route: 'inbox',
+    icon: <TiMessages />
+  },
+  {
+    id: 4,
+    label: 'Order list',
+    route: 'order-list',
+    icon: <FaListUl />
+  },
+  {
+    id: 4,
+    label: 'Product stock',
+    route: 'stock',
+    icon: <RiFileListFill />
+  },
+]

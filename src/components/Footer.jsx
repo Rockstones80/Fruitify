@@ -9,7 +9,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className=" border-t-[1px] border-slate-300 w-full py-12 mt-12 flex justify-between">
+    <div className=" border-t-[1px] border-slate-300 w-full py-12 mt-12 flex px-20 justify-between">
       <div className="flex flex-col gap-32">
         <p className="font-bold">Fruitify</p>
         <img src={Icons} alt="" />
