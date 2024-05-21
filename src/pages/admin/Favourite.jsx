@@ -3,7 +3,10 @@
 const Favourite = () => {
   return (
     <div>
-      Fvaourite
+      <p className="text-xl font-bold">Favorites</p>
+      <div>
+        
+      </div>
     </div>
   )
 }

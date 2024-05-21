@@ -106,3 +106,90 @@ export const sideTop = [
     icon: <RiFileListFill />
   },
 ]
+
+
+import Bitmap from "../assets/Bitmap.svg"
+import Bitmap1 from "../assets/Bitmap1.svg"
+
+export const series = [
+  {
+    id: 1,
+    title: 'Apple Watch Series 4 ',
+    price: '$120.00',
+    image: Bitmap,
+    
+  },
+  {
+    id: 2,
+    title: 'Apple-Max-270 ',
+    price: '$20.00',
+    image: Bitmap1,
+
+  },
+  {
+    id:3,
+    title: 'Apple Watch Series 5 ',
+    price: '$320.00',
+    image: Bitmap,
+
+  },
+
+
+];
+
+export const data = [
+  {
+    "name": "Sunday",
+    // "uv": 3490,
+    "pv": 67,
+    "amt": 2100
+  },
+  {
+    "name": "Monday",
+    // "uv": 4000,
+    "pv": 80,
+    "amt": 2400
+  },
+  {
+    "name": "Tuesday",
+    // "uv": 3000,
+    "pv": 48,
+    "amt": 2210
+  },
+  {
+    "name": "Wednesday",
+    // "uv": 2000,
+    "pv": 84,
+    "amt": 2290
+  },
+  {
+    "name": "Thursday",
+    // "uv": 2780,
+    "pv": 35,
+    "amt": 2000
+  },
+  {
+    "name": "Friday",
+    // "uv": 1890,
+    "pv": 98,
+    "amt": 2181
+  },
+  {
+    "name": "Saturday",
+    // "uv": 2390,
+    "pv": 50,
+    "amt": 2500
+  },
+  {
+    "name": "Sunday",
+    // "uv": 2390,
+    "pv": 90,
+    "amt": 2500
+  },
+  {
+    "name": "Monday",
+    // "uv": 2390,
+    "pv": 53,
+    "amt": 2500
+  },
+]

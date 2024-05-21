@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .nav .active{
     @apply bg-[#4880FF] text-white
 }
