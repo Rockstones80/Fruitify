@@ -26,17 +26,17 @@ const AdminProduct = () => {
               <p className="font-semibold text-sm pb-4">Designer Dresses - Pick from trendy Designer Dress</p>
               <button className=" bg-[#FF8743] w-[156px] h-11 font-bold text-sm rounded-xl"> Get Started</button>
             </div>
-              <div className="flex pl-16 gap-[780px] mt-[-200px]">
+              <div className="flex pl-[77px] gap-[780px] mt-[-200px]">
                <button>
                 <MdOutlineKeyboardArrowLeft  size={40} className=" bg-[#E2EAF8] bg-opacity-20 rounded-full text-[#363636] "/>
                </button>
-               <button>
+               <button className=" pl-5"> 
                  <MdOutlineKeyboardArrowRight  size={40} className=" bg-[#F4F4F4] bg-opacity-20 rounded-full text-[#363636] "/>
                </button>
                </div> 
         </div>
 
-        <div className=" px-3 flex gap-6 mb-16 ">
+        <div className="flex gap-6 mb-16 ">
           {series.map((serie, index) =>(
             < Adminduct
              key={index}

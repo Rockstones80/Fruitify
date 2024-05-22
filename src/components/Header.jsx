@@ -13,7 +13,7 @@ const Header = () => {
   const { cart } = useContext(CartContext)
   
   return (
-    <div className=" px-20 py-7 w-full flex items-center justify-between">
+    <div className="py-7 w-full flex items-center justify-between">
       <Link to='/'><div className=" font-extrabold text-3xl ">fruitify</div></Link>
       <div className=" flex gap-8">
         <Link to="/">Home</Link>

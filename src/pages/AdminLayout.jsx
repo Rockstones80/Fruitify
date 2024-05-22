@@ -17,11 +17,11 @@ const AdminLayout = () => {
   // }, [window.innerWidth])
   // console.log(window.innerWidth)
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="overflow-hidden h-full">
       <div><AdminNavbar setOpen={setSideOpen} isOpen={sideOpen} /></div>
-      <div className="flex gap-5">
+      <div className="flex gap-7">
         <AdminSidebar isOpen={sideOpen} setOpen={setSideOpen} />
-        <div className="bg-[#F5F6FA] flex-[6] w-full pt-8 px-6 h-screen overflow-y-auto">
+        <div className="bg-[#F5F6FA] flex-[6] w-full pt-8 px-6 ">
           <Routes>
             <Route path='dashboard' element={<Dashboard />} />
             <Route path='product' element={<AdminProduct />} />

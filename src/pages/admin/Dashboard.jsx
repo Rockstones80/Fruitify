@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="">
       <p className="text-xl font-bold">Dashboard</p>
-      <div className="py-3 flex gap-3">
+      <div className="py-3 flex gap-6 ">
         <DashboardCard
           icon={<HiUsers size={33}/>}
           name='User'

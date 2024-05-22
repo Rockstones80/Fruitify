@@ -8,7 +8,7 @@ const Adminduct = ({image, title, price}) => {
 
     
   return (
-    <div className=" bg-white rounded-2xl w-[305px] h-[420px] mb-9">
+    <div className=" bg-white rounded-2xl w-[326px] h-[420px] mb-9">
       <img src={image} alt="" className=" w-[305px] rounded-2xl"/>
       <div className="flex justify-between  p-4">
         <div>

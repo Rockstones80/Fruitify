@@ -5,7 +5,7 @@ import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts"
 
 const DashboardChart = () => {
   return (
-    <div className='w-full flex justify-center'>
+    <div className='w-[1028px] h-[365px] py-12 px-3 flex mb-8 rounded-3xl bg-white'>
       <AreaChart width={1000} height={280} data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <defs>
