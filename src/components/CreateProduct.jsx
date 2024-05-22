@@ -1,19 +1,20 @@
-import { useEffect, useState } from 'react'
+import {useState, useCallback} from 'react'
+import { useDropzone } from 'react-dropzone'
 
-const AddProductPop = ({popOpen, setPopOpen, item, action}) => {
-  const [productName, setProductName] = useState('')
-  const [productPrice, setProductPrice] = useState('')
-  const [productImage, setProductImage] = useState()
+const CreateProduct = ({popOpen, setPopOpen, action}) => {
+    const [productName, setProductName] = useState('')
+    const [productPrice, setProductPrice] = useState('')
+    const [productImage, setProductImage] = useState(null)
 
-  const closeModal = (e) => {
-    if(e.target === e.currentTarget) setPopOpen(false)
-  }
+    const closeModal = (e) => {
+        if(e.target === e.currentTarget) setPopOpen(false)
+    }
 
-  useEffect(()=>{
-    setProductImage(item?.image)
-    setProductName(item?.title)
-    setProductPrice(item?.price)
-  }, [item])
+    const onDrop = useCallback(acceptedFiles => {
+        setProductImage(URL.createObjectURL(acceptedFiles))
+        console.log(acceptedFiles)
+      }, [])
+    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   return (
     <div onClick={closeModal} className={`${popOpen ? 'flex' : 'hidden'} fixed top-0 left-0 bg-black bg-opacity-60 w-full h-full justify-center items-center`}>
@@ -22,9 +23,15 @@ const AddProductPop = ({popOpen, setPopOpen, item, action}) => {
         <div className="flex">
           <div className="flex-1">
             <div><img src={productImage} alt="" /></div>
-            {/* <textarea value={item?.about} name="" className='w-full h-[120px] border-2 border-blue-600 outline-none rounded-md' id="">
-              
-            </textarea> */}
+            {!productImage && <div {...getRootProps()}>
+            <input {...getInputProps()} />
+                {
+                    isDragActive ?
+                    <p>Drop the files here ...</p> :
+                    <p>Drag 'n' drop some files here, or click to select files</p>
+                }
+            </div>}
+
           </div>
           <div className="flex-1 flex flex-col gap-4">
             <input className='w-full h-12 border-2 border-blue-600 outline-none rounded-md px-3' value={productName} onChange={e=>setProductName(e.target.value)} type="text"  />
@@ -37,4 +44,4 @@ const AddProductPop = ({popOpen, setPopOpen, item, action}) => {
   )
 }
 
-export default AddProductPop
+export default CreateProduct

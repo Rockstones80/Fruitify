@@ -5,13 +5,21 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {series} from "../../utilities/constant"
 import Adminduct from "../../components/Adminduct"
 import AddProductPop from "../../components/AddProductPop";
+import { useState } from "react";
+import CreateProduct from "../../components/CreateProduct";
 
 const AdminProduct = () => {
+  const [popOpen, setPopOpen] = useState(false)
+  const [createPop, setCreatePop] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   return (
     <div>
       <div>
-        <p className="text-xl font-bold">Product</p>
+        <div className="flex justify-between w-full">
+          <p className="text-xl font-bold">Product</p>
+          <button onClick={()=>setCreatePop(true)} className="py-3 px-8 rounded-md bg-blue-600 text-white">Add Product</button>
+        </div>
         <div className=" bg-cover bg-center w-[100%] " 
            style={{
             backgroundImage: `url(${Rename})`,
@@ -40,14 +48,23 @@ const AdminProduct = () => {
           {series.map((serie, index) =>(
             < Adminduct
              key={index}
-             image={serie.image}
-             title={serie.title} 
-             price={serie.price}
-            
+             product={serie}
+             setPopOpen={setPopOpen}
+             setSelectedProduct={setSelectedProduct}
              />
           ))}
         </div>
-      <AddProductPop />
+      <AddProductPop
+        popOpen={popOpen}
+        setPopOpen={setPopOpen}
+        action='Edit'
+        item={selectedProduct}
+      />
+      <CreateProduct
+        setPopOpen={setCreatePop}
+        popOpen={createPop}
+        action='Create'
+      />
       </div>
     </div>
   )

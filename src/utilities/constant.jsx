@@ -115,21 +115,21 @@ export const series = [
   {
     id: 1,
     title: 'Apple Watch Series 4 ',
-    price: '$120.00',
+    price: 120,
     image: Bitmap,
     
   },
   {
     id: 2,
     title: 'Apple-Max-270 ',
-    price: '$20.00',
+    price: 20,
     image: Bitmap1,
 
   },
   {
     id:3,
     title: 'Apple Watch Series 5 ',
-    price: '$320.00',
+    price: 320,
     image: Bitmap,
 
   },
