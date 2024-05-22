@@ -3,7 +3,7 @@ import { IoMdMenu, IoMdSearch, IoIosArrowDropdown } from "react-icons/io";
 
 const AdminNavbar = ({ setOpen, isOpen }) => {
   return (
-    <div className="flex justify-between py-3 px-5 bg-white">
+    <div className="flex justify-between py-3 px-5 bg-white ">
       <div className=" flex items-center gap-[63px]">
         <p className=" font-extrabold text-xl ml-5">
           <span className=" text-[#4880FF]">Dash</span>Stack

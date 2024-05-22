@@ -7,3 +7,33 @@
 .nav .active{
     @apply bg-[#4880FF] text-white
 }
+
+
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 40px; /* Adjust the value as needed */
+  }
+  
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #ffff transparent;
+  }
+  
+  /* For Internet Explorer and Edge */
+  .custom-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-color: #fff transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 50px; /* Scrollbar width */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0aec0; /* Scrollbar thumb color */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Scrollbar track color */
+  }
