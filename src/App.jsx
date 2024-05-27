@@ -5,8 +5,12 @@ import Dynamic from "./pages/Dynamic";
 import Cart from "./pages/Cart";
 // import Footer from "./components/Footer";
 import AdminLayout from "./pages/AdminLayout";
+import Login from "./pages/Login";
+import { useState } from "react";
 
 const App = () => {
+  const [isAuthenticated, setAuthenticated] = useState(false)
+
   return (
     <div>
       <BrowserRouter>
@@ -15,6 +19,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="product/:id" element={<Dynamic />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="login" element={<Login setAuthenticated={setAuthenticated} />} />
           <Route path="admin/*" element={<AdminLayout />} />
         </Routes>
         {/* <Footer /> */}

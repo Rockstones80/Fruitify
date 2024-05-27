@@ -13,7 +13,7 @@ const Adminduct = ({product, setPopOpen, setSelectedProduct}) => {
   return (
     <div className=" bg-white rounded-2xl w-[326px] h-[420px] mb-9">
       <img src={product.image} alt="" className=" w-[305px] rounded-2xl"/>
-      <div className="flex justify-between  p-4">
+      <div className="flex justify-between  p-5">
         <div>
         <p className=" font-bold text-[18px]">{product.title}</p>
         <p className=" font-bold text-sm text-[#4880FF] py-2">${product.price}</p>

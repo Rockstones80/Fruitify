@@ -8,6 +8,10 @@
     @apply bg-[#4880FF] text-white
 }
 
+/* .nav.hover {
+  @apply bg-[#487fffbe] text-white
+} */
+
 
 /* For WebKit-based browsers (Chrome, Safari, Opera) */
 .custom-scrollbar::-webkit-scrollbar-thumb {
@@ -17,13 +21,13 @@
   /* For Firefox */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #ffff transparent;
+    scrollbar-color: #ffffff13 transparent;
   }
   
   /* For Internet Explorer and Edge */
   .custom-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-color: #fff transparent;
+    scrollbar-color: transparent;
   }
   
   .custom-scrollbar::-webkit-scrollbar {
@@ -31,7 +35,7 @@
   }
   
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #a0aec0; /* Scrollbar thumb color */
+    background-color: transparent; /* Scrollbar thumb color */
   }
   
   .custom-scrollbar::-webkit-scrollbar-track {
