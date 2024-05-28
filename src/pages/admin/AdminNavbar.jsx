@@ -62,7 +62,11 @@ const AdminNavbar = ({ setOpen, isOpen }) => {
             <p className="font-bold text-sm text-[#404040] ">{username}</p>
             <p className="font-light text-sm">{userEmail}</p>
           </div>
+          <div className=" cursor-pointer">
+
           <IoIosArrowDropdown size={18} color="grey" />
+
+          </div>
         </div>
       </div> : <div>
         <Link to='/login' className="py-3 px-6 bg-blue-600 text-white rounded-md">Login</Link>

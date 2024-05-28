@@ -31,7 +31,7 @@ const AdminSidebar = ({ isOpen, setOpen }) => {
           key={index}
           className={`flex gap-3 mx-3 mt-4 py-2 px-4 ${
             isOpen || isClick ? "w-full" : "w-fit"
-          } text-sm font-semibold rounded-md`}
+          } text-sm font-semibold rounded-md hover:bg-[#4880FF] hover:text-white`}
           to={item.route}
         >
           <span className="my-auto w-fit text-base">{item.icon}</span>
