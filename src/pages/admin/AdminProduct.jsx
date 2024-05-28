@@ -5,13 +5,16 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {series} from "../../utilities/constant"
 import Adminduct from "../../components/Adminduct"
 import AddProductPop from "../../components/AddProductPop";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CreateProduct from "../../components/CreateProduct";
+import { ApiContext } from "../../utilities/ApiContext";
 
 const AdminProduct = () => {
   const [popOpen, setPopOpen] = useState(false)
   const [createPop, setCreatePop] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState(null)
+
+  const { postProduct } = useContext(ApiContext)
 
   return (
     <div>

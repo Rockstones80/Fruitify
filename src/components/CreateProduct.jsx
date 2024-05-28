@@ -1,13 +1,36 @@
-import {useState, useCallback} from 'react'
+import {useState, useCallback, useContext} from 'react'
 import { useDropzone } from 'react-dropzone'
+import { ApiContext } from '../utilities/ApiContext'
+import { toast } from 'react-toastify'
 
 const CreateProduct = ({popOpen, setPopOpen, action}) => {
     const [productName, setProductName] = useState('')
     const [productPrice, setProductPrice] = useState('')
     const [productImage, setProductImage] = useState(null)
 
+    const { postProduct} = useContext(ApiContext)
+
     const closeModal = (e) => {
         if(e.target === e.currentTarget) setPopOpen(false)
+    }
+
+    const productPoster = () => {
+      if(productName == ''){
+        console.log('error')
+        toast('Product name cannot be empty')
+        return;
+      }
+      if(productPrice == ''){
+        console.log('error')
+        toast('Product price cannot be empty')
+        return
+      }
+      let theData = {
+        name: productName,
+        price: productPrice
+      }
+      postProduct(theData)
+  
     }
 
     const onDrop = useCallback(acceptedFiles => {
@@ -38,7 +61,7 @@ const CreateProduct = ({popOpen, setPopOpen, action}) => {
             <input className='w-full h-12 border-2 border-blue-600 outline-none rounded-md px-3' value={productPrice} onChange={e=>setProductPrice(e.target.value)} type="number"  />
           </div>
         </div>
-        <button className='py-3 w-full rounded-md bg-blue-600 text-white font-semibold'>Submit</button>
+        <button onClick={productPoster} className='py-3 w-full rounded-md bg-blue-600 text-white font-semibold'>Submit</button>
       </div>
     </div>
   )

@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { ApiContext } from '../utilities/ApiContext'
+import { toast } from 'react-toastify'
 
 const AddProductPop = ({popOpen, setPopOpen, item, action}) => {
   const [productName, setProductName] = useState('')
@@ -8,6 +10,8 @@ const AddProductPop = ({popOpen, setPopOpen, item, action}) => {
   const closeModal = (e) => {
     if(e.target === e.currentTarget) setPopOpen(false)
   }
+
+  
 
   useEffect(()=>{
     setProductImage(item?.image)
