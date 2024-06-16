@@ -14,7 +14,7 @@ const AdminProduct = () => {
   const [createPop, setCreatePop] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState(null)
 
-  // const { postProduct } = useContext(ApiContext)
+  const { postProduct } = useContext(ApiContext)
 
   return (
     <div>
